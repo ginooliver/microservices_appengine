@@ -1,0 +1,12 @@
+dispatch:
+  - url: "*/"
+    service: default
+
+  - url: "*/ms1"
+    service: ms1
+
+  - url: "*/ms2"
+    service: ms2
+
+  - url: "*/ms3"
+    service: ms3  

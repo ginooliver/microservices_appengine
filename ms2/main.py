@@ -6,5 +6,5 @@ class MainPage(webapp2.RequestHandler):
         self.response.write('Microservice2')
 
 app = webapp2.WSGIApplication([
-    ('/', MainPage),
+    ('/ms2', MainPage),
 ], debug=True)

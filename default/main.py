@@ -2,14 +2,11 @@ import jinja2
 import os
 import webapp2
 
+import socket
+import sys
+
 jinja_environment = jinja2.Environment(
 		loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
-
-### BASE HANDLER
-
-class _BaseHandler(webapp2.RequestHandler):
-	def initialize(self, request, response):
-		super(_BaseHandler, self).initialize(request, response)
 
 ### STATIC PAGES ###
 
@@ -19,6 +16,5 @@ class HomePage(webapp2.RequestHandler):
 		self.response.out.write(template.render())
 
 app = webapp2.WSGIApplication([
-		('',HomePage),
 		('/',HomePage),],
 		debug=True)
